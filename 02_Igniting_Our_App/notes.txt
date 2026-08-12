@@ -1,0 +1,110 @@
+In the Episode-01 Inception : We wrote a code for printing Hello wolrd in different ways.
+                              We used HTML, JS and React to print Hello World.
+
+Question : Is the above code (Inception) is ready to send to production ?
+Answer : No ,The Reason is to make your application ready to go into production you need to do lot of processing in your local or lot of processing before you push your code into production.
+         Before sending it into Production you need to basically do bundling, code splitting, chunking, Image Optimisation, remove the comments, minify and compress the code.
+
+
+Fun Fact : What is NPM?
+           It is not a Node Package Manager. It does not have any full form. The developers of NPM says NPM stands for anything except Node Package Manager.
+           NPM manages Packages.It is the standard Repository for all the packages.
+           
+package.json is the configuration file for the NPM.
+
+Question : Why do we need package.json file?
+Answer : NPM is a package manager. It manages packages that we will install in our system. Some time these packages are also known as dependencies.
+         Our project or application depends on many packages or dependencies. So the NPM will take care of the versions of packages in this package.json file.
+         Also this file tracks the allthe packages or dependencies in our project.
+
+Question : What is Bundler ( web-pack,vite and parcel )?
+Answer :  Before sending it into Production you need to basically do bundling, code splitting, chunking, Image Optimisation, remove the comments, minify and compress the code.
+          So this Bundler helps to do these all things. 
+          Bundler basically bundles your application or packages your application properly so that it can be shipped to production.
+
+Google It : Difference between ( npm install parcel ) and ( npm install -D parcel ).
+Answer : There are two types of dependencies a application can have. one is Dev dependency and another one is normal one.
+         Dev dependency is required in a development phase. Normal dependencies are used in production also. So here we are using parcel for bundling, chunking etc.. ( developing phase) so we install Dev dependency.
+
+Question : When you install parcel in your application, that dependency is added in package.json file and also there is one extra file and folder is created that are 
+           package-lock.json and node_modules folder.
+           so what is the Difference between package.json and package-lock.json ?
+Answer : package.json is a configuration file for npm and it keeps the track of what version of that package installed.If there is a caret(^) that means if there is any minor change it will also install that version also.It can have caret(^) and tilde(~).
+         whereas package-lock.json keeps the track of exact version of that package or dependency is being installed.
+         node_modules is like a database. It contains actual data or code or packages or dependencies that our application need.
+         This node_modules have the package of parcel and another transitive dependencies. These transitive dependencies are nothing but, they help the parcel dependency.
+
+Question : Why there are so many packages or dependencies present in the node_modules when u install just parcel ?
+Answer : Our project has a dependency of parcel but parcel itself is one project and it can have it's own dependencies and those dependencies are nothing but the transitive dependencies.
+         So that is why we have so many folders or packages in node_modules.
+
+Question : How would npm know that parcel have it's own dependencies?
+Answer :  When you install a package like Parcel, npm knows about its dependencies through the package.json file bundled inside the package itself.
+
+Question : If you see the size of the node_modules it is huge. Should i put this node_modules into production or git?
+Answer : No, We don't put this huge folder into git. Instead we create a folder called gitingore and we put all the node_modules folder inside it.
+         Now when we push the code into github this gitignore folder gets ignored.
+
+Question : Should we put this package-lock.json and package.json into the git and Why?
+Answer : Yes, Because these packages keep the track of packages that our project need. It is important to keep these two packages into git but you have to put node_modules. Because if i have my package.json and package-lock.json file i can regenerate my node_modules.
+         so it is not necessary to put your node_modules into git. git can only have essentials so Whatever things that we can regenerate is not put into the git.
+
+important point : gitignore contains all the files that we don't want to put inside the git.
+
+important point : When u run ( npx parcel index.html ) command in terminal then our app is ignited or our app is hosted in server ( http://localhost:1234 ).
+
+Question : Explain about this command npx parcel index.html ?
+Answer : When you type npm it is for installing any packages. Where as when you type npx then it is for executing that pacakge. 
+         So here in this command we are excuting the parcel bundler. So here index.html is the source. 
+         When you write that command this parcel will goes to that source index.html and builts a development for our application and also it hosts that development at localhost 1234.
+
+important point : So in the 01_Inception class we said that CDN links are used to bring react into our project.
+                  There is also a another way to bring the react to our application that is using npm. React is a javascript library or package so from npm we can install react package and we can use it.
+
+Question : CDN is not the preferred way to bring react into your project. Why ?
+Answer : Fetching from CDN is a costly operation. Also when you use these CDN links, suppose at that time the version of react is 18 and if the new version is released again we need change that CDN url there.
+         So to install react and react-dom in node_modules we need to run these two commands ( npm install react , npm install react-dom ).
+         Also when you are importing react and reactDOM from node_modules make sure your script tag contains type as module because normal brower scripts do not understand import and export scripts.
+
+
+Question : What are the things does parcel do?
+Answer : Firstly it created a Dev Build for us.
+         It creates a local server for us.
+         Also Parcel automatically reloads our page (HMR -> Hot Module Replacement).
+         Parcel uses the file watching algorithm ( written in c++ ) and it automatically reloads the page.
+         Also parcel gives faster builts with the help of parcel-cache. parcel will always cache the files so the next time it will builts faster.
+         Parcel also helps in image Optimisation ( The most expensive thing in web browser is to load images )
+         When you make production built , Parcel will bundle or minify the files.
+         It also compress the files. It will remove all whitespaces from the file.
+         React is not only a thing that makes te application fast. 
+         Also parcel is not doing these things by it's own. It uses lots of other dependencies.
+         Parcel does Consistent Hashing.
+         It will do code splitting for you.
+         It also do Differential Bundling ( which gives the support of older browsers ).
+         Parcel does the Diagnostics behind the application.
+         It gives you better error suggestions.
+         Parcel also give you a way to host your application in HTTPs.
+         Parcel does Tree Shaking ( Which means it removes unused code for you )
+         It have different production and development bundles.
+
+
+Question : How to build the production ready application using parcel?
+Answer : For production use this command ( npx parcel build index.html ).
+         When you write the above command and if you face any error then make sure that there is no main in the package.json file.
+         In package.json there is main key. It says that it is a entry point for the node_modules but for parcel during the command we will provide the entry point so remove that main key in the package.json file.
+         Production build takes more time than the Development build because at production level more optimisations are done.
+
+Question : What is dist folder?
+Answer : When you excute parcel ( npx parcel index.html ), It genereates the development build of our project and hosted it onto 1234. 
+         So when it generates a development build ,it puts in the dist folder. Also when you builts production build ,it aslo goes into the dist folder.
+         Suppose if there are many files in the application when you builts the productaion build then all these files are minified into 3 files ( index.html , index.css , app.js). These 3 files contains all the code you write.
+         These 3 files are the production ready code for your application.
+         Now this production build is highly optimised build , which you can push onto production and serve this application to the users.
+
+important point : This parcel-cache and dist can be regenerated.
+                  Suppose if you delete this two folders you can regenerate them by building the development build.
+                  Those are temoparary folders and you can regenerate them easily.
+                  So can file that can be regenerated cannot be put in github. So put them in gitignore.
+
+
+
