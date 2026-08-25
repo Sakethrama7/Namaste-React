@@ -1,0 +1,32 @@
+npx parcel index.html --> This command will create a development build for us and also it will host at localhost 1234.
+                          This command means that you are executing a NPM package ( parcel ) and you give a source file as index.html.
+                          These commands are different for development build and production build. So to make it simpler we create some NPM scripts which will builts development and production builds instead of writing these commands.
+
+Question : How do you create these NPM scripts?
+Answer : Open the package.json file. In this file inside the scripts you need to write 
+         "scripts" : {
+            "start" : " parcel index.html",                --> It is used to create a development build.
+            "build" : " parcel build index.html"           --> It is used to create a production build.
+         }
+
+Question : How do you run these scripts?
+Answer : npm run ( name of script )  (or) npm (name of script)
+         For development build --> npm run start (or) npm start
+         For production build  --> npm run build (or) npm build.
+         These commands behind the scenes excute the package parcel with index.html because we configured this inside package.json.
+
+
+Question : How do you create React Element?
+Answer : React.createElement() --> is not a HTML Element. It is a React Element. At the end of the day React Element is a Object.
+         React.createElement("h1",{id: "heading"}, "Namaste React!"); --> This is a react element.
+         React.createElement() --> This basically creates an object. When we render this Element onto the DOM then it becomes the HTML Element.
+
+React Core and JSX : This above one is the React core. Initially we create React elements using this core but later facebook developers created a JSX which is better than React core to create React Elements.
+                     JSX is not part of React. JSX and React are separate.
+                     We can write React without JSX also. We can build any big application with React without using JSX also but JSX makes our developers life easy.
+
+JSX and JS : JSX is not pure JS. JS does not comes with JSX built inside it. Browser or JS Engine does not understand JSX.
+             JS is a code that JS Engine understands it but JS Engine does not understand JSX. JS Engine understands ECMA Script ( ES ).This ES is the pure JS that JS Engine understands.
+
+JSX : Suppose you extracting or fetching any data through API, then there can be a malicious data that can be executed which is also called as Cross site Scripting.
+      But here JSX is so amazing that it takes care of these Injection attacks. It prevents Cross Site Scripting attacks for you.
