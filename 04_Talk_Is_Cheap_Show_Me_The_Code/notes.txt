@@ -5,4 +5,7 @@
 -> After planning only you should start writing the code.
 
 -> passing a prop to a component is like passing a argument to a function. This props are used to make our restaurant card dynamic.
+
+-> What is Config Driven UI?
+   It is nothing but the UI is driven by Config ( which means data ). This configs comes from a backend.
     
