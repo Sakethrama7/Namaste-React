@@ -1,0 +1,8 @@
+-> In this Class we are going to built the food Ordering Application.
+-> Before you going to make a frontend of your Application you should do planning.
+   > You should exactly know what you are building?
+   > Then make a plan of UI. How it should look like?
+-> After planning only you should start writing the code.
+
+-> passing a prop to a component is like passing a argument to a function. This props are used to make our restaurant card dynamic.
+    
