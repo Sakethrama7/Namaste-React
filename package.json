@@ -21,6 +21,8 @@
     "build:02": "parcel build 02_Igniting_Our_App/index.html",
     "start:03": "parcel 03_Laying_The_Foundation/index.html",
     "build:03": "parcel build 03_Laying_The_Foundation/index.html",
+    "start:04": "parcel 04_Talk_Is_Cheap_Show_Me_The_Code/index.html",
+    "build:04": "parcel build 04_Talk_Is_Cheap_Show_Me_The_Code/index.html",
     "test": "jest"
   },
   "devDependencies": {
