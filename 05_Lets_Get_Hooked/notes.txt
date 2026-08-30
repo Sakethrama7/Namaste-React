@@ -1,0 +1,33 @@
+-> Everything that React can do, you can do that using normal HTML, CSS and JS.
+Question : Then Why React?
+Answer : The beauty of using Framework and Library is it makes your developer experience easy. It makes you write less code and do more on Web Page.
+         So React give you Super powers so that you can build these large scalable production ready performant application.
+         React makes your coding experiences very fast and also optimizes something on Web page so that things happen very fast.
+
+-> The Best practice is to make separate files for separate components.
+   Never ever place the Hard Coded data, strings inside the components folder.
+
+-> There can be two types of exports and imports.
+   -> Exports :
+      1. Default Export : One way of export is default export. For one file you can only use one default export.
+         you cannot write a default export twice in a file.
+      2. Named Export : To export multiple components in a single file we need to use Named Exports.
+   -> Imports :
+      1. Default Import : import Component from "path"
+      2. Named Import : import {Component} from "path"
+
+-> Can you use both default and Named export for same Component in a file?
+
+-> React Hooks ( Normal JS Utility Functions -> written by some Facebook Developers )
+   There are many React Hooks in that there are 2 main React Hooks. They are
+   1. useState() -> used to generate super powerful state variables
+   2. useEffect() 
+
+-> React will make the DOM operactions very easy and fast. Also as soon as i change my state Variable react will automatically refreshes that component. It keeps the data layer in sync with UI layer.
+-> What is React Algorithm and How React works behind the scenes?
+   React uses something called as Reconcilliation Algorithm. This Algorithm is also known as React Fiber.
+   This React Fiber came in React 16.
+   Virtual DOM is actual representation of Actual DOM. Also it is the object.
+   This Algorthim finds the difference between Old Virtual DOM and New Virtual DOM and then it will update the Actual DOM. That's how React becomes faster.
+   So whenever there is change in any state variable, React will find out difference between virtual DOM and then re render the component.
+
