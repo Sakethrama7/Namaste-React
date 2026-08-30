@@ -23,6 +23,8 @@
     "build:03": "parcel build 03_Laying_The_Foundation/index.html",
     "start:04": "parcel 04_Talk_Is_Cheap_Show_Me_The_Code/index.html",
     "build:04": "parcel build 04_Talk_Is_Cheap_Show_Me_The_Code/index.html",
+    "start:05": "parcel 05_Let's_Get_Hooked/index.html",
+    "build:05": "parcel build 05_Let's_Get_Hooked/index.html",
     "test": "jest"
   },
   "devDependencies": {
