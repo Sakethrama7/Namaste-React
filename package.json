@@ -25,6 +25,8 @@
     "build:04": "parcel build 04_Talk_Is_Cheap_Show_Me_The_Code/index.html",
     "start:05": "parcel 05_Let's_Get_Hooked/index.html",
     "build:05": "parcel build 05_Let's_Get_Hooked/index.html",
+    "start:06": "parcel 06_Exploring_The_World/index.html",
+    "build:06": "parcel build 06_Exploring_The_World/index.html",
     "test": "jest"
   },
   "devDependencies": {
