@@ -1,0 +1,27 @@
+-> In Previous Classes we used the mock data or hard coded data. But in this Class we will learn how to use live data coming from backend using API calls.
+-> There are two ways to call these APIs
+   1. As soon as our page loads, we can make an API call wait for data to come and then we render the UI.
+   2. As soon as our page loads, we will render our UI and then we will make an API call. As soon as we get result back from API, we will populate or re-render the application based on new data.
+
+-> In the above two ways we prefer 2nd method because in 1st method as soon as our page loads, then we need to wait for 500 ms or something to make an API call. during this our page is blank which is not a good practice.
+   So where as in 2nd method as soon as our page loads, we will render our UI and then if we make an API call, here user did not experience any blank pages.
+   React renders our UI very fast because React has fast rendering cycles.
+
+-> React hook : It is nothing but a normal JS function, which React gives to us and it has it's own specific use case.
+
+-> What is the use of useState?
+   In my Header Component i want to add the button named login. when you click on that button it will change to logout.
+   So here it should change dynamically. So here in that button i used onClick attribute , so when ever the button gets clicked it will change to logout. 
+   But the problem here is the btnName is changing but updated name is not rendering on the UI. It is because the btnName is normal local JS variable.
+   To behave dynamically the btnName should be a state variable it means u need to use useState here.
+   Whenever the state variable changes with help of setbtnNameReact function , React will re-render this Header component.
+
+-> Is React re-render the whole header component or just button?
+   Whenever the state varible gets updated or changed then React will re-render the whole Header Component.
+
+-> const [btnNameReact,setbtnNameReact] =useState("Login");
+   so here whenever that btnNameReact is changed or updated. Did u got a question like : It is const variable who does it get updated or change?
+
+-> Whenever the local state variable updates React triggers a reconsillation cycle(it means it re-renders the component).
+   React is triggering the reconsillation cycle, It is finding the differnce between the Older Virtual DOM and Newer Virtual DOM.
+   Virtual DOM -> It is Object representation of JSX.
