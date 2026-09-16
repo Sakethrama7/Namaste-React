@@ -1,0 +1,19 @@
+Question : When is the useEffect() called?
+Answer : Everytime the component is rendered then the useEffect() will be called. The dependency array present in the useEffect() will change the behaviour of it's render.
+
+-> How to create different routes using React. 
+   For routing we use a npm JS library which is react router dom.
+   Firstly you need to install react router dom into our project by using this command -> npm i react-router-dom
+   After that now go to the app.js which is our top most component of our project.
+   Now in that you need to create routing configurations. ( wherever you want to create routes there you need to create a routing configurations ).
+
+-> In react when I'm in home page and I want to go to About us or any other page don't use any anchor tag there. Because when you anchor tag to move from one page to another then the whole page get's refreshed or reloaded.
+   So without reloading the whole page while navigating from one page to another using Link component.
+   Now this Link component is provided by react-router-dom.
+   It works the same as the anchor tag.
+   Anchor tag reloads the whole page where as Link reloads that particular component.
+   This is why we call React as Single Page Application.
+
+-> Two types of routing in web apps
+   1. Client Side routing -> There will be no network calls here. Side page Application uses Client Side Routing.
+   2. Server Side routing -> It means you make a network call and a page about.html coming from server.
