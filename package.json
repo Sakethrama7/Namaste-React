@@ -27,6 +27,8 @@
     "build:05": "parcel build 05_Let's_Get_Hooked/index.html",
     "start:06": "parcel 06_Exploring_The_World/index.html",
     "build:06": "parcel build 06_Exploring_The_World/index.html",
+    "start:07": "parcel 07_Finding_The_Path/index.html",
+    "build:07": "parcel build 07_Finding_The_Path/index.html",
     "test": "jest"
   },
   "devDependencies": {
@@ -34,7 +36,8 @@
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.6"
   },
   "browserslist": [
     "last 3 versions"
