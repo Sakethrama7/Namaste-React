@@ -29,6 +29,8 @@
     "build:06": "parcel build 06_Exploring_The_World/index.html",
     "start:07": "parcel 07_Finding_The_Path/index.html",
     "build:07": "parcel build 07_Finding_The_Path/index.html",
+    "start:08": "parcel 08_Let's_Get_Classy/index.html",
+    "build:08": "parcel build 08_Let's_Get_Classy/index.html",
     "test": "jest"
   },
   "devDependencies": {
