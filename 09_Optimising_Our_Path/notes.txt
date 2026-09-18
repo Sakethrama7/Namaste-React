@@ -1,0 +1,10 @@
+-> In this Lecture we will learn how to create our own utility function.
+   Generally to achieve Single Responsibility Principle ( It means Let's take an example of RestaurantMenu component. Actually this component does two things : First one is to fecth the menu data from the particular restuarant. Second one is to display it on UI or render it. But here the component is doing two things. So to follow Single responsibility priciple every component should do only one work. So that it helps in code Readability, Testing and then Code reuseability.)
+   So to achieve it we need to create a custom hook. So that it will take care of that fetch data work and this RestaurantMenu component will just focus on displaying that data through UI.
+
+-> Hooks are nothing but a normal utility functions or hepler functions.
+   Create a hooks in utils folder and also for separate hook create a separate file.
+
+-> Chunking, Code splitting, Dynamic Bundling , Lazy Loading, On demand Loading , dynamic import
+ -> These all are same ( It means to break down our app into smaller logical chunks.)
+   Whenever app bundle size is increasing or bloating then we use lazy loading
