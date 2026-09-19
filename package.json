@@ -33,15 +33,19 @@
     "build:08": "parcel build 08_Let's_Get_Classy/index.html",
     "start:09": "parcel 09_Optimising_Our_Path/index.html",
     "build:09": "parcel build 09_Optimising_Our_Path/index.html",
+    "start:10": "parcel 10_Jo_Diktha_Hai_Vo_Biktha_Hai/index.html",
+    "build:10": "parcel build 10_Jo_Diktha_Hai_Vo_Biktha_Hai/index.html",
     "test": "jest"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^6.30.6"
+    "react-router-dom": "^6.30.6",
+    "tailwindcss": "^4.3.3"
   },
   "browserslist": [
     "last 3 versions"
